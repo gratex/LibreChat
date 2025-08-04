@@ -107,6 +107,21 @@ export default function ApiKeyDialog({
         },
       },
     },
+    {
+      key: RerankerTypes.CUSTOM,
+      label: localize('com_ui_web_search_reranker_custom'),
+      inputs: {
+        customRerankerUrl: {
+          placeholder: localize('com_ui_web_search_reranker_custom_url'),
+          type: 'text',
+        },
+        customRerankerApiKey: {
+          placeholder: localize('com_ui_web_search_reranker_custom_key'),
+          type: 'password',
+          optional: true,
+        },
+      },
+    },
   ];
 
   const scraperOptions: DropdownOption[] = [

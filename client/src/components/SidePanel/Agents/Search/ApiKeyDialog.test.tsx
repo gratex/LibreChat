@@ -97,6 +97,22 @@ describe('ApiKeyDialog', () => {
     fireEvent.click(screen.getByText('com_ui_web_search_reranker_cohere'));
     expect(screen.getByText('com_ui_web_search_reranker_cohere_key')).toBeInTheDocument();
   });
+  it('shows custom reranker fields if rerankerType is set to custom', () => {
+    mockUseGetStartupConfig.mockReturnValue({
+      data: { webSearch: { rerankerType: RerankerTypes.CUSTOM } },
+    });
+    render(<ApiKeyDialog {...defaultProps} />);
+    expect(screen.getByPlaceholderText('com_ui_web_search_reranker_custom_url')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('com_ui_web_search_reranker_custom_key')).toBeInTheDocument();
+  });
+
+  it('shows custom reranker fields when selected', () => {
+    mockUseGetStartupConfig.mockReturnValue({ data: {} });
+    render(<ApiKeyDialog {...defaultProps} />);
+    fireEvent.click(screen.getByText('com_ui_web_search_reranker_custom'));
+    expect(screen.getByPlaceholderText('com_ui_web_search_reranker_custom_url')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('com_ui_web_search_reranker_custom_key')).toBeInTheDocument();
+  });
 
   it('does not render provider section if SYSTEM_DEFINED', () => {
     mockUseGetStartupConfig.mockReturnValue({ data: {} });
