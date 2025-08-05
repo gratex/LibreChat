@@ -134,3 +134,6 @@ helm/**/.values.yaml
 /.openai/
 /.tabnine/
 /.codeium
+
+# Ignore local CA certificate
+CA-GTICA2K8.crt
