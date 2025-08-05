@@ -3,7 +3,6 @@ const { SerpAPI } = require('@langchain/community/tools/serpapi');
 const { Calculator } = require('@langchain/community/tools/calculator');
 const { mcpToolPattern, loadWebSearchAuth } = require('@librechat/api');
 const { EnvVar, createCodeExecutionTool, createSearchTool } = require('@librechat/agents');
-const { applyReranking } = require('./reranker');
 const { Tools, EToolResources, replaceSpecialVars } = require('librechat-data-provider');
 const {
   availableTools,
@@ -293,10 +292,7 @@ Current Date & Time: ${replaceSpecialVars({ text: '{{iso_datetime}}' })}
 `.trim();
         return createSearchTool({
           ...result.authResult,
-          onSearchResults: async (results, runnableConfig) => {
-            const rerankedResults = await applyReranking(results, webSearchConfig);
-            onSearchResults(rerankedResults, runnableConfig);
-          },
+          onSearchResults,
           onGetHighlights,
           logger,
         });
