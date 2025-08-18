@@ -27,7 +27,6 @@ const { getUserPluginAuthValue } = require('~/server/services/PluginService');
 const { loadAuthValues } = require('~/server/services/Tools/credentials');
 const { getCachedTools } = require('~/server/services/Config');
 const { createMCPTool } = require('~/server/services/MCP');
-const { applyReranking } = require('./reranker');
 
 /**
  * Validates the availability and authentication of tools for a user based on environment variables or user-specific plugin authentication values.
@@ -293,19 +292,7 @@ Current Date & Time: ${replaceSpecialVars({ text: '{{iso_datetime}}' })}
 `.trim();
         return createSearchTool({
           ...result.authResult,
-          onSearchResults: async (results, runnableConfig) => {
-            logger.info('[onSearchResults] scraper results:', results);
-            const { query } = runnableConfig.configurable;
-            if (!results.documents) {
-              logger.warn('[onSearchResults] results.documents is missing. Creating empty array.');
-              results.documents = [];
-            }
-            const rerankedDocs = await applyReranking(query, results.documents, result.authResult.rerankerType, result.authResult);
-            results.documents = rerankedDocs;
-            if (onSearchResults) {
-              onSearchResults(results, runnableConfig);
-            }
-          },
+          onSearchResults,
           onGetHighlights,
           logger,
         });
