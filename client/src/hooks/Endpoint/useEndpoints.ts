@@ -16,7 +16,7 @@ import type {
 import type { Endpoint } from '~/common';
 import { mapEndpoints, getIconKey, getEndpointField } from '~/utils';
 import { useGetEndpointsQuery } from '~/data-provider';
-import { useHasAccess } from '~/hooks';
+import { useHasAccess, useLocalize } from '~/hooks';
 import { icons } from './Icons';
 
 export const useEndpoints = ({
@@ -30,6 +30,7 @@ export const useEndpoints = ({
   endpointsConfig: TEndpointsConfig;
   startupConfig: TStartupConfig | undefined;
 }) => {
+  const localize = useLocalize();
   const modelsQuery = useGetModelsQuery();
   const { data: endpoints = [] } = useGetEndpointsQuery({ select: mapEndpoints });
   const interfaceConfig = startupConfig?.interface ?? {};
@@ -94,7 +95,7 @@ export const useEndpoints = ({
       // Base result object with formatted default icon
       const result: Endpoint = {
         value: ep,
-        label: alternateName[ep] || ep,
+        label: ep === EModelEndpoint.agents ? localize('com_endpoint_my_agents') : alternateName[ep] || ep,
         hasModels,
         icon: Icon
           ? React.createElement(Icon, {

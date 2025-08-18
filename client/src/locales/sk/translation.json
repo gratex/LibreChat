@@ -1240,5 +1240,6 @@
   "com_ui_x_selected": "{{0}} vybraných",
   "com_ui_yes": "Áno",
   "com_ui_zoom": "Priblížiť",
-  "com_user_message": "Vy"
+  "com_user_message": "Vy",
+  "com_endpoint_my_agents": "Moji Kopiloti"
 }
