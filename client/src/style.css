@@ -61,6 +61,9 @@
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --markdown-font-size: 1rem;
+  /* New color variables */
+  --primary-button-color: #349CEA;
+  --headline-color: #00217E;
 }
 html {
   --brand-purple: #ab68ff;
@@ -1354,12 +1357,12 @@ button {
 .btn-primary {
   --tw-bg-opacity: 1;
   --tw-text-opacity: 1;
-  background-color: rgba(16, 163, 127, var(--tw-bg-opacity));
+  background-color: var(--primary-button-color);
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 .btn-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(26, 127, 100, var(--tw-bg-opacity));
+  background-color: color-mix(in srgb, var(--primary-button-color) 80%, black);
 }
 .btn-primary:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width)
@@ -1376,7 +1379,7 @@ button {
 }
 .btn-primary.focus-visible {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(25, 195, 125, var(--tw-ring-opacity));
+  --tw-ring-color: color-mix(in srgb, var(--primary-button-color) 80%, white);
 }
 .btn-primary:focus-visible {
   --tw-ring-opacity: 1;
@@ -1384,7 +1387,7 @@ button {
 }
 .btn-primary:disabled:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(16, 163, 127, var(--tw-bg-opacity));
+  background-color: var(--primary-button-color);
 }
 .btn-secondary {
   --tw-border-opacity: 1;
@@ -1509,9 +1512,11 @@ html {
 
 .markdown h1 {
   font-size: calc(var(--markdown-font-size) * 1.75);
+  color: var(--headline-color);
 }
 .markdown h2 {
   font-size: calc(var(--markdown-font-size) * 1.5);
+  color: var(--headline-color);
 }
 
 .markdown h2 {
@@ -1522,6 +1527,7 @@ html {
 .markdown h3 {
   font-weight: 600;
   font-size: calc(var(--markdown-font-size) * 1.25);
+  color: var(--headline-color);
 }
 
 .markdown h3,
@@ -1533,6 +1539,7 @@ html {
 .markdown h4 {
   font-weight: 400;
   font-size: calc(var(--markdown-font-size) * 1.1);
+  color: var(--headline-color);
 }
 
 .markdown h5 {
