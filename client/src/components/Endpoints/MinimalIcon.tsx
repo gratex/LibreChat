@@ -1,3 +1,4 @@
+import CustomMinimalIcon from '~/svgs/CustomMinimalIcon';
 import { Feather } from 'lucide-react';
 import { EModelEndpoint, alternateName } from 'librechat-data-provider';
 import {

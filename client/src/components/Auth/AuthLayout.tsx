@@ -60,37 +60,36 @@ function AuthLayout({
     <div className="relative flex min-h-screen flex-col bg-white dark:bg-gray-900">
       <Banner />
       <BlinkAnimation active={isFetching}>
-        <div className="mt-6 h-10 w-full bg-cover">
-          <img
-            src="/assets/logo.png"
-            className="h-full w-full object-contain"
-            alt={localize('com_ui_logo', { 0: startupConfig?.appTitle ?? 'LibreChat' })}
-          />
+        <DisplayError />
+        <div className="absolute bottom-0 left-0 md:m-4">
+          <ThemeSelector />
         </div>
-      </BlinkAnimation>
-      <DisplayError />
-      <div className="absolute bottom-0 left-0 md:m-4">
-        <ThemeSelector />
-      </div>
 
-      <div className="flex flex-grow items-center justify-center">
-        <div className="w-authPageWidth overflow-hidden bg-white px-6 py-4 dark:bg-gray-900 sm:max-w-md sm:rounded-lg">
-          {!hasStartupConfigError && !isFetching && (
-            <h1
-              className="mb-4 text-center text-3xl font-semibold text-black dark:text-white"
-              style={{ userSelect: 'none' }}
-            >
-              {header}
-            </h1>
-          )}
-          {children}
-          {!pathname.includes('2fa') &&
-            (pathname.includes('login') || pathname.includes('register')) && (
-              <SocialLoginRender startupConfig={startupConfig} />
+        <div className="flex flex-grow items-center justify-center">
+          <div className="w-authPageWidth overflow-hidden bg-white px-6 py-4 dark:bg-gray-900 sm:max-w-md sm:rounded-lg">
+            {/* Logo above header, scales with form width */}
+            <img
+              src="/assets/t2m_big.svg"
+              style={{ width: '100%', height: 'auto', marginBottom: '1.5rem' }}
+              alt={localize('com_ui_logo', { 0: startupConfig?.appTitle ?? 'Toss2Machine' })}
+            />
+            {!hasStartupConfigError && !isFetching && (
+              <h1
+                className="mb-4 text-center text-3xl font-semibold text-black dark:text-white"
+                style={{ userSelect: 'none' }}
+              >
+                {header}
+              </h1>
             )}
+            {children}
+            {!pathname.includes('2fa') &&
+              (pathname.includes('login') || pathname.includes('register')) && (
+                <SocialLoginRender startupConfig={startupConfig} />
+              )}
+          </div>
         </div>
-      </div>
-      <Footer startupConfig={startupConfig} />
+        <Footer startupConfig={startupConfig} />
+      </BlinkAnimation>
     </div>
   );
 }

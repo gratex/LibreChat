@@ -5,7 +5,7 @@ import { BirthdayIcon, TooltipAnchor, SplitText } from '@librechat/client';
 import { useChatContext, useAgentsMapContext, useAssistantsMapContext } from '~/Providers';
 import { useGetEndpointsQuery, useGetStartupConfig } from '~/data-provider';
 import ConvoIcon from '~/components/Endpoints/ConvoIcon';
-import { useLocalize, useAuthContext } from '~/hooks';
+import { useLocalize, useAuthContext, useWindowSize } from '~/hooks';
 import { getIconEndpoint, getEntity } from '~/utils';
 
 const containerClassName =
@@ -35,6 +35,7 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
   const { data: endpointsConfig } = useGetEndpointsQuery();
   const { user } = useAuthContext();
   const localize = useLocalize();
+  const { height } = useWindowSize();
 
   const [textHasMultipleLines, setTextHasMultipleLines] = useState(false);
   const [lineCount, setLineCount] = useState(1);
@@ -143,10 +144,25 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
       ? getGreeting()
       : getGreeting() + (user?.name ? ', ' + user.name : '');
 
+  const logoStyle = {
+    width: '100%',
+    maxWidth: height < 700 ? (height < 500 ? '240px' : '360px') : '480px',
+    height: 'auto',
+    marginBottom: '2rem',
+    display: height < 400 ? 'none' : 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  };
+
   return (
     <div
-      className={`flex h-full transform-gpu flex-col items-center justify-center pb-16 transition-all duration-200 ${centerFormOnLanding ? 'max-h-full sm:max-h-0' : 'max-h-full'} ${getDynamicMargin}`}
+      className={`flex h-full transform-gpu flex-col items-center justify-end pb-16 transition-all duration-200 ${centerFormOnLanding ? 'max-h-full sm:max-h-0' : 'max-h-full'} ${getDynamicMargin}`}
     >
+      <img
+        src="/assets/t2m_big.svg"
+        alt="Toss2Machine Logo"
+        style={logoStyle}
+      />
       <div ref={contentRef} className="flex flex-col items-center gap-0 p-2">
         <div
           className={`flex ${textHasMultipleLines ? 'flex-col' : 'flex-col md:flex-row'} items-center justify-center gap-2`}

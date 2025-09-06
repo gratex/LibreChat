@@ -86,6 +86,14 @@ export default function NewChat({
           />
         </div>
       </div>
+      {/* Logo above search */}
+      <div className="mb-4 flex justify-center rounded-md p-2">
+        <img
+          src="/assets/t2m_mid.svg"
+          alt="LibreChat Logo"
+          className="w-full max-w-[200px] object-contain opacity-70"
+        />
+      </div>
       {subHeaders != null ? subHeaders : null}
     </>
   );
