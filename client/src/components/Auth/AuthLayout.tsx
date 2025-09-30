@@ -55,7 +55,7 @@ function AuthLayout({
     }
     return null;
   };
-
+//TODO: logo in upstream was logo.svg, now it's logo.png
   return (
     <div className="relative flex min-h-screen flex-col bg-white dark:bg-gray-900">
       <Banner />

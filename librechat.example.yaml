@@ -90,17 +90,11 @@ interface:
   multiConvo: true
   agents: true
   peoplePicker:
-    admin:
-      users: true
-      groups: true
-    user:
-      users: false
-      groups: false
+    users: true
+    groups: true
+    roles: true
   marketplace:
-    admin:
-      use: false  # Enable marketplace mode for admin role
-    user:
-      use: false  # Enable marketplace mode for user role
+      use: false
   fileCitations: true
   # Temporary chat retention period in hours (default: 720, min: 1, max: 8760)
   # temporaryChatRetention: 1
@@ -126,6 +120,14 @@ registration:
 #   refillIntervalValue: 30
 #   refillIntervalUnit: 'days'
 #   refillAmount: 10000
+
+# Example Transactions settings
+# Controls whether to save transaction records to the database
+# Default is true (enabled)
+#transactions:
+#  enabled: false
+# Note: If balance.enabled is true, transactions will always be enabled
+# regardless of this setting to ensure balance tracking works correctly
 
 # speech:
 #   tts:
@@ -347,6 +349,24 @@ endpoints:
 #     quality: 0.92  # JPEG quality for compression (0.0-1.0, default: 0.92)
 # # See the Custom Configuration Guide for more information on Assistants Config:
 # # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
+
+# Web Search Configuration (optional)
+# webSearch:
+#   # Jina Reranking Configuration
+#   jinaApiKey: '${JINA_API_KEY}'  # Your Jina API key
+#   jinaApiUrl: '${JINA_API_URL}'  # Custom Jina API URL (optional, defaults to https://api.jina.ai/v1/rerank)
+#   
+#   # Other rerankers
+#   cohereApiKey: '${COHERE_API_KEY}'
+#   
+#   # Search providers
+#   serperApiKey: '${SERPER_API_KEY}'
+#   searxngInstanceUrl: '${SEARXNG_INSTANCE_URL}'
+#   searxngApiKey: '${SEARXNG_API_KEY}'
+#   
+#   # Content scrapers
+#   firecrawlApiKey: '${FIRECRAWL_API_KEY}'
+#   firecrawlApiUrl: '${FIRECRAWL_API_URL}'
 
 # Memory configuration for user memories
 # memory:
