@@ -3269,3 +3269,183 @@ html {
 .sharepoint-picker-bg{
   background-color: #F5F5F5;
 }
+
+/* Fix code block visibility in light mode */
+.prose :where(code):not(:where([class~='not-prose'] *)) {
+  background-color: var(--gray-200);
+  color: var(--text-primary);
+}
+
+.dark .prose :where(code):not(:where([class~='not-prose'] *)):not(:where(pre *)) {
+  background-color: var(--gray-600);
+  color: var(--text-primary);
+}
+
+/* Fix code block container styling for light mode */
+.w-full.rounded-md.bg-gray-900.text-xs.text-white\/80 {
+  background-color: var(--surface-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-light) !important;
+}
+
+.dark .w-full.rounded-md.bg-gray-900.text-xs.text-white\/80 {
+  background-color: #1f2937 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid var(--border-medium) !important;
+}
+
+/* Fix code block header styling for light mode */
+.bg-gray-700.px-4.py-2.font-sans.text-xs.text-gray-200 {
+  background-color: var(--surface-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dark .bg-gray-700.px-4.py-2.font-sans.text-xs.text-gray-200 {
+  background-color: #374151 !important;
+  color: #e5e7eb !important;
+  border-bottom: 1px solid var(--border-medium) !important;
+}
+
+/* Fix hljs syntax highlighting for light mode */
+code.hljs,
+code[class*='language-'],
+pre[class*='language-'] {
+  background: none;
+  color: var(--text-primary);
+}
+
+.dark code.hljs,
+.dark code[class*='language-'],
+.dark pre[class*='language-'] {
+  background: none;
+  color: #fff;
+}
+
+/* Light mode syntax highlighting colors */
+.hljs-comment {
+  color: #6b7280;
+}
+
+.hljs-meta {
+  color: #6b7280;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #d97706;
+}
+
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword,
+.hljs-literal {
+  color: #2563eb;
+}
+
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string,
+.hljs-regexp,
+.hljs-string {
+  color: #059669;
+}
+
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: #dc2626;
+}
+
+.hljs-bullet,
+.hljs-link,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: #dc2626;
+}
+
+/* Dark mode syntax highlighting colors (keep existing) */
+.dark .hljs-comment {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.dark .hljs-meta {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.dark .hljs-built_in,
+.dark .hljs-class .hljs-title {
+  color: #e9950c;
+}
+
+.dark .hljs-doctag,
+.dark .hljs-formula,
+.dark .hljs-keyword,
+.dark .hljs-literal {
+  color: #2e95d3;
+}
+
+.dark .hljs-addition,
+.dark .hljs-attribute,
+.dark .hljs-meta-string,
+.dark .hljs-regexp,
+.dark .hljs-string {
+  color: #00a67d;
+}
+
+.dark .hljs-attr,
+.dark .hljs-number,
+.dark .hljs-selector-attr,
+.dark .hljs-selector-class,
+.dark .hljs-selector-pseudo,
+.dark .hljs-template-variable,
+.dark .hljs-type,
+.dark .hljs-variable {
+  color: #df3079;
+}
+
+.dark .hljs-bullet,
+.dark .hljs-link,
+.dark .hljs-selector-id,
+.dark .hljs-symbol,
+.dark .hljs-title {
+  color: #f22c3d;
+}
+
+/* Fix menu opacity issues in light mode */
+.data-\[active-item\]\:bg-black\/\[0\.075\][data-active-item] {
+  background-color: rgba(1, 109, 255, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark .data-\[active-item\]\:bg-black\/\[0\.075\][data-active-item] {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+.hover\:bg-black\/\[0\.075\]:hover {
+  background-color: rgba(1, 109, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark .hover\:bg-black\/\[0\.075\]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Fix menu background opacity for better readability */
+.bg-surface-secondary {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px);
+}
+
+.dark .bg-surface-secondary {
+  background-color: rgba(1, 22, 103, 0.95) !important;
+  backdrop-filter: blur(8px);
+}
