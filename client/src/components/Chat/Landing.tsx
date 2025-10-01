@@ -1,7 +1,7 @@
-import { useMemo, useCallback, useState, useEffect, useRef } from 'react';
+import { useMemo, useCallback, useState, useEffect, useRef, useContext } from 'react';
 import { easings } from '@react-spring/web';
 import { EModelEndpoint } from 'librechat-data-provider';
-import { BirthdayIcon, TooltipAnchor, SplitText } from '@librechat/client';
+import { BirthdayIcon, TooltipAnchor, SplitText, ThemeContext, isDark } from '@librechat/client';
 import { useChatContext, useAgentsMapContext, useAssistantsMapContext } from '~/Providers';
 import { useGetEndpointsQuery, useGetStartupConfig } from '~/data-provider';
 import ConvoIcon from '~/components/Endpoints/ConvoIcon';
@@ -36,6 +36,7 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
   const { user } = useAuthContext();
   const localize = useLocalize();
   const { height } = useWindowSize();
+  const { theme } = useContext(ThemeContext);
 
   const [textHasMultipleLines, setTextHasMultipleLines] = useState(false);
   const [lineCount, setLineCount] = useState(1);
@@ -154,12 +155,15 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
     marginRight: 'auto',
   };
 
+  // Determine which logo to use based on theme
+  const logoSrc = isDark(theme) ? "/assets/logo_T2M_white.svg" : "/assets/logo_T2M.svg";
+
   return (
     <div
       className={`flex h-full transform-gpu flex-col items-center justify-end pb-16 transition-all duration-200 ${centerFormOnLanding ? 'max-h-full sm:max-h-0' : 'max-h-full'} ${getDynamicMargin}`}
     >
       <img
-        src="/assets/t2m_big.svg"
+        src={logoSrc}
         alt="Toss2Machine Logo"
         style={logoStyle}
       />

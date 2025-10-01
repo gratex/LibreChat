@@ -283,14 +283,14 @@ export default function AssistantSelect({
       containerClassName="flex-grow"
       searchClassName="dark:from-gray-850"
       searchPlaceholder={localize('com_assistants_search_name')}
-      optionsClass="hover:bg-gray-20/50 dark:border-gray-700"
-      optionsListClass="rounded-lg shadow-lg dark:bg-gray-850 dark:border-gray-700 dark:last:border"
+      optionsClass="hover:bg-surface-hover dark:border-border-medium"
+      optionsListClass="rounded-lg shadow-lg dark:bg-surface-primary dark:border-border-medium dark:last:border"
       currentValueClass={cn(
         'text-md font-semibold text-gray-900 dark:text-white',
         value === '' ? 'text-gray-500' : '',
       )}
       className={cn(
-        'mt-1 rounded-md dark:border-gray-700 dark:bg-gray-850',
+        'mt-1 rounded-md dark:border-border-medium dark:bg-surface-primary',
         'z-50 flex h-[40px] w-full flex-none items-center justify-center px-4 hover:cursor-pointer hover:border-green-500 focus:border-gray-400',
       )}
       renderOption={() => (

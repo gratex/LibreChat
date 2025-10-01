@@ -955,7 +955,7 @@
   "com_ui_mcp_oauth_cancelled": "OAuth prihlásenie pre {{0}} zrušené",
   "com_ui_mcp_oauth_timeout": "OAuth prihlásenie pre {{0}} vypršalo",
   "com_ui_mcp_server_not_found": "Server sa nenašiel.",
-  "com_ui_mcp_servers": "MCP servery",
+  "com_ui_mcp_servers": "Nástroje (MCP)",
   "com_ui_mcp_update_var": "Aktualizovať {{0}}",
   "com_ui_mcp_url": "URL MCP servera",
   "com_ui_medium": "Stredná",

@@ -1,4 +1,5 @@
-import { ThemeSelector } from '@librechat/client';
+import { useContext } from 'react';
+import { ThemeSelector, ThemeContext, isDark } from '@librechat/client';
 import { TStartupConfig } from 'librechat-data-provider';
 import { ErrorMessage } from '~/components/Auth/ErrorMessage';
 import { TranslationKeys, useLocalize } from '~/hooks';
@@ -25,6 +26,7 @@ function AuthLayout({
   error: TranslationKeys | null;
 }) {
   const localize = useLocalize();
+  const { theme } = useContext(ThemeContext);
 
   const hasStartupConfigError = startupConfigError !== null && startupConfigError !== undefined;
   const DisplayError = () => {
@@ -55,9 +57,12 @@ function AuthLayout({
     }
     return null;
   };
-//TODO: logo in upstream was logo.svg, now it's logo.png
+
+  // Determine which logo to use based on theme
+  const logoSrc = isDark(theme) ? "/assets/logo_T2M_white.svg" : "/assets/logo_T2M.svg";
+
   return (
-    <div className="relative flex min-h-screen flex-col bg-white dark:bg-gray-900">
+    <div className="relative flex min-h-screen flex-col bg-white dark:bg-surface-primary">
       <Banner />
       <BlinkAnimation active={isFetching}>
         <DisplayError />
@@ -66,10 +71,10 @@ function AuthLayout({
         </div>
 
         <div className="flex flex-grow items-center justify-center">
-          <div className="w-authPageWidth overflow-hidden bg-white px-6 py-4 dark:bg-gray-900 sm:max-w-md sm:rounded-lg">
+          <div className="w-authPageWidth overflow-hidden bg-white px-6 py-4 dark:bg-surface-secondary sm:max-w-md sm:rounded-lg">
             {/* Logo above header, scales with form width */}
             <img
-              src="/assets/t2m_big.svg"
+              src={logoSrc}
               style={{ width: '100%', height: 'auto', marginBottom: '1.5rem' }}
               alt={localize('com_ui_logo', { 0: startupConfig?.appTitle ?? 'Toss2Machine' })}
             />

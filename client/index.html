@@ -9,9 +9,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="description" content="LibreChat - An open source chat application with support for multiple AI models" />
     <title>LibreChat</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/Piktogram.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/Piktogram.png" />
-    <link rel="apple-touch-icon" href="/assets/Piktogram.png" />
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/favicon.svg" id="favicon-light" />
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/logo_T2M_znak.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
     <style>
       html,
@@ -25,16 +25,27 @@
       const theme = localStorage.getItem('color-theme');
       const loadingContainerStyle = document.createElement('style');
       let backgroundColor;
+      let isDarkMode = false;
 
       if (theme === 'dark') {
         backgroundColor = '#0d0d0d';
+        isDarkMode = true;
       } else if (theme === 'light') {
         backgroundColor = '#ffffff';
+        isDarkMode = false;
       } else if (theme === 'system') {
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
         backgroundColor = prefersDarkScheme ? '#0d0d0d' : '#ffffff';
+        isDarkMode = prefersDarkScheme;
       } else {
         backgroundColor = '#ffffff';
+        isDarkMode = false;
+      }
+
+      // Update favicon based on theme
+      const faviconLink = document.querySelector('link[rel="icon"][sizes="32x32"]');
+      if (faviconLink) {
+        faviconLink.href = isDarkMode ? '/assets/favicon_white.svg' : '/assets/favicon.svg';
       }
 
       loadingContainerStyle.innerHTML = `

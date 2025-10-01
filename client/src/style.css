@@ -62,43 +62,43 @@
   --font-size-xl: 1.25rem;
   --markdown-font-size: 1rem;
   /* New color variables */
-  --primary-button-color: #349CEA;
-  --headline-color: #00217E;
+  --primary-button-color: #016DFF;
+  --headline-color: #011667;
 }
 html {
-  --brand-purple: #ab68ff;
-  --presentation: var(--white);
-  --text-primary: var(--gray-800);
-  --text-secondary: var(--gray-600);
-  --text-secondary-alt: var(--gray-500);
-  --text-tertiary: var(--gray-500);
+  --brand-purple: #016DFF;
+  --presentation: #FFFFFF;
+  --text-primary: #011667;
+  --text-secondary: #016DFF;
+  --text-secondary-alt: #28E6C5;
+  --text-tertiary: #011667;
   --text-warning: var(--amber-500);
-  --ring-primary: var(--gray-500);
-  --header-primary: var(--white);
-  --header-hover: var(--gray-50);
-  --header-button-hover: var(--gray-50);
-  --surface-active: var(--gray-100);
-  --surface-active-alt: var(--gray-200);
-  --surface-hover: var(--gray-200);
-  --surface-hover-alt: var(--gray-300);
-  --surface-primary: var(--white);
-  --surface-primary-alt: var(--gray-50);
-  --surface-primary-contrast: var(--gray-100);
-  --surface-secondary: var(--gray-50);
-  --surface-secondary-alt: var(--gray-200);
-  --surface-tertiary: var(--gray-100);
-  --surface-tertiary-alt: var(--white);
-  --surface-dialog: var(--white);
-  --surface-submit: var(--gray-700);
-  --surface-submit-hover: var(--gray-800);
+  --ring-primary: #016DFF;
+  --header-primary: #FFFFFF;
+  --header-hover: rgba(1, 109, 255, 0.1);
+  --header-button-hover: rgba(1, 109, 255, 0.1);
+  --surface-active: rgba(1, 109, 255, 0.1);
+  --surface-active-alt: rgba(1, 109, 255, 0.2);
+  --surface-hover: rgba(1, 109, 255, 0.05);
+  --surface-hover-alt: rgba(1, 109, 255, 0.1);
+  --surface-primary: #FFFFFF;
+  --surface-primary-alt: rgba(1, 22, 103, 0.02);
+  --surface-primary-contrast: rgba(1, 22, 103, 0.05);
+  --surface-secondary: rgba(1, 22, 103, 0.03);
+  --surface-secondary-alt: rgba(1, 109, 255, 0.05);
+  --surface-tertiary: rgba(1, 22, 103, 0.05);
+  --surface-tertiary-alt: #FFFFFF;
+  --surface-dialog: #FFFFFF;
+  --surface-submit: #016DFF;
+  --surface-submit-hover: #0056CC;
   --surface-destructive: var(--red-700);
   --surface-destructive-hover: var(--red-800);
-  --surface-chat: var(--white);
-  --border-light: var(--gray-200);
-  --border-medium-alt: var(--gray-300);
-  --border-medium: var(--gray-300);
-  --border-heavy: var(--gray-400);
-  --border-xheavy: var(--gray-500);
+  --surface-chat: #FFFFFF;
+  --border-light: rgba(1, 22, 103, 0.1);
+  --border-medium-alt: rgba(1, 22, 103, 0.15);
+  --border-medium: rgba(1, 22, 103, 0.15);
+  --border-heavy: rgba(1, 109, 255, 0.3);
+  --border-xheavy: #016DFF;
   /* These are test styles */
 
   --background: 0 0% 100%;
@@ -127,38 +127,38 @@ html {
   --switch-unchecked: 0 0% 58%;
 }
 .dark {
-  --brand-purple: #ab68ff;
-  --presentation: var(--gray-800);
-  --text-primary: var(--gray-100);
-  --text-secondary: var(--gray-300);
-  --text-secondary-alt: var(--gray-400);
-  --text-tertiary: var(--gray-500);
+  --brand-purple: #28E6C5;
+  --presentation: #011667;
+  --text-primary: #FFFFFF;
+  --text-secondary: #28E6C5;
+  --text-secondary-alt: #016DFF;
+  --text-tertiary: #FFFFFF;
   --text-warning: var(--amber-500);
-  --header-primary: var(--gray-700);
-  --header-hover: var(--gray-600);
-  --header-button-hover: var(--gray-700);
-  --surface-active: var(--gray-500);
-  --surface-active-alt: var(--gray-700);
-  --surface-hover: var(--gray-600);
-  --surface-hover-alt: var(--gray-600);
-  --surface-primary: var(--gray-900);
-  --surface-primary-alt: var(--gray-850);
-  --surface-primary-contrast: var(--gray-850);
-  --surface-secondary: var(--gray-800);
-  --surface-secondary-alt: var(--gray-800);
-  --surface-tertiary: var(--gray-700);
-  --surface-tertiary-alt: var(--gray-700);
-  --surface-dialog: var(--gray-850);
-  --surface-submit: var(--gray-700);
-  --surface-submit-hover: var(--gray-800);
+  --header-primary: #011667;
+  --header-hover: rgba(40, 230, 197, 0.1);
+  --header-button-hover: rgba(40, 230, 197, 0.1);
+  --surface-active: rgba(40, 230, 197, 0.2);
+  --surface-active-alt: rgba(1, 109, 255, 0.2);
+  --surface-hover: rgba(40, 230, 197, 0.1);
+  --surface-hover-alt: rgba(1, 109, 255, 0.1);
+  --surface-primary: #011667;
+  --surface-primary-alt: rgba(1, 22, 103, 0.8);
+  --surface-primary-contrast: rgba(1, 22, 103, 0.9);
+  --surface-secondary: rgba(1, 22, 103, 0.7);
+  --surface-secondary-alt: rgba(1, 22, 103, 0.6);
+  --surface-tertiary: rgba(1, 22, 103, 0.5);
+  --surface-tertiary-alt: rgba(1, 22, 103, 0.4);
+  --surface-dialog: #011667;
+  --surface-submit: #28E6C5;
+  --surface-submit-hover: #1FD4B3;
   --surface-destructive: var(--red-800);
   --surface-destructive-hover: var(--red-900);
-  --surface-chat: var(--gray-700);
-  --border-light: var(--gray-700);
-  --border-medium-alt: var(--gray-600);
-  --border-medium: var(--gray-600);
-  --border-heavy: var(--gray-500);
-  --border-xheavy: var(--gray-400);
+  --surface-chat: rgba(1, 22, 103, 0.8);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-medium-alt: rgba(255, 255, 255, 0.15);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-heavy: rgba(40, 230, 197, 0.3);
+  --border-xheavy: #28E6C5;
   /* These are test styles */
 
   --background: 0 0% 7%;
@@ -186,28 +186,469 @@ html {
   --switch-unchecked: 0 0% 40%;
 }
 .gizmo {
-  --text-primary: var(--gizmo-gray-950);
-  --text-secondary: var(--gizmo-gray-600);
-  --text-tertiary: var(--gizmo-gray-500);
-  --surface-primary: var(--white);
-  --surface-secondary: var(--gray-50);
-  --surface-tertiary: var(--gray-100);
-  --border-light: rgba(0, 0, 0, 0.1);
-  --border-medium: rgba(0, 0, 0, 0.15);
-  --border-heavy: rgba(0, 0, 0, 0.2);
-  --border-xheavy: rgba(0, 0, 0, 0.25);
+  --text-primary: #011667;
+  --text-secondary: #016DFF;
+  --text-tertiary: #28E6C5;
+  --surface-primary: #FFFFFF;
+  --surface-secondary: #f8f9fa;
+  --surface-tertiary: #e9ecef;
+  --border-light: rgba(1, 22, 103, 0.1);
+  --border-medium: rgba(1, 22, 103, 0.15);
+  --border-heavy: rgba(1, 22, 103, 0.2);
+  --border-xheavy: rgba(1, 22, 103, 0.25);
 }
 .gizmo.dark {
-  --text-primary: var(--gray-100);
-  --text-secondary: var(--gray-300);
-  --text-tertiary: var(--gizmo-gray-500);
-  --surface-primary: var(--gray-900);
-  --surface-secondary: var(--gray-800);
-  --surface-tertiary: var(--gray-700);
-  --border-light: rgba(217, 217, 227, 0.1);
-  --border-medium: rgba(217, 217, 227, 0.15);
-  --border-heavy: rgba(217, 217, 227, 0.2);
-  --border-xheavy: rgba(217, 217, 227, 0.25);
+  --text-primary: #FFFFFF;
+  --text-secondary: #28E6C5;
+  --text-tertiary: #016DFF;
+  --surface-primary: #011667;
+  --surface-secondary: #012080;
+  --surface-tertiary: #013399;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-heavy: rgba(255, 255, 255, 0.2);
+  --border-xheavy: rgba(255, 255, 255, 0.25);
+}
+
+/* Navigation Sidebar Styles */
+.bg-token-sidebar-surface-primary {
+  background-color: var(--surface-primary);
+}
+
+.bg-token-main-surface-primary {
+  background-color: var(--surface-primary);
+}
+
+/* Ensure sidenav uses proper background */
+.sidenav {
+  background-color: var(--surface-primary);
+}
+
+/* Utility classes to replace common gray colors */
+.bg-gray-50 {
+  background-color: var(--surface-secondary) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--surface-secondary) !important;
+}
+
+.bg-gray-200 {
+  background-color: var(--surface-secondary) !important;
+}
+
+.bg-gray-300 {
+  background-color: var(--surface-tertiary) !important;
+}
+
+.bg-gray-400 {
+  background-color: var(--surface-tertiary) !important;
+}
+
+.bg-gray-500 {
+  background-color: var(--surface-tertiary) !important;
+}
+
+.bg-gray-600 {
+  background-color: var(--surface-tertiary) !important;
+}
+
+.bg-gray-700 {
+  background-color: var(--surface-primary) !important;
+}
+
+.bg-gray-800 {
+  background-color: var(--surface-primary) !important;
+}
+
+.bg-gray-850 {
+  background-color: var(--surface-primary) !important;
+}
+
+.bg-gray-900 {
+  background-color: var(--surface-primary) !important;
+}
+
+.text-gray-200 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-300 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-700 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-800 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--border-medium) !important;
+}
+
+.border-gray-300 {
+  border-color: var(--border-medium) !important;
+}
+
+.border-gray-400 {
+  border-color: var(--border-medium) !important;
+}
+
+.border-gray-500 {
+  border-color: var(--border-medium) !important;
+}
+
+.border-gray-600 {
+  border-color: var(--border-medium) !important;
+}
+
+.border-gray-700 {
+  border-color: var(--border-heavy) !important;
+}
+
+.border-gray-800 {
+  border-color: var(--border-heavy) !important;
+}
+
+/* Hover states using brand colors */
+.hover\:bg-gray-100:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.hover\:bg-gray-300:hover {
+  background-color: var(--surface-tertiary) !important;
+}
+
+.hover\:bg-gray-400:hover {
+  background-color: var(--surface-tertiary) !important;
+}
+
+.hover\:bg-gray-600:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.hover\:bg-gray-700:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.hover\:bg-gray-800:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.hover\:text-gray-200:hover {
+  color: var(--text-primary) !important;
+}
+
+.hover\:text-gray-400:hover {
+  color: var(--text-secondary) !important;
+}
+
+.hover\:text-gray-500:hover {
+  color: var(--text-secondary) !important;
+}
+
+.hover\:text-gray-600:hover {
+  color: var(--text-secondary) !important;
+}
+
+.hover\:text-gray-700:hover {
+  color: var(--text-primary) !important;
+}
+
+.hover\:text-gray-900:hover {
+  color: var(--text-primary) !important;
+}
+
+/* Dark mode specific overrides */
+.dark .bg-gray-50 {
+  background-color: var(--surface-secondary) !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: var(--surface-secondary) !important;
+}
+
+.dark .bg-gray-200 {
+  background-color: var(--surface-secondary) !important;
+}
+
+.dark .bg-gray-700 {
+  background-color: var(--surface-primary) !important;
+}
+
+.dark .bg-gray-800 {
+  background-color: var(--surface-primary) !important;
+}
+
+.dark .bg-gray-850 {
+  background-color: var(--surface-primary) !important;
+}
+
+.dark .bg-gray-900 {
+  background-color: var(--surface-primary) !important;
+}
+
+.dark .text-gray-100 {
+  color: var(--text-primary) !important;
+}
+
+.dark .text-gray-200 {
+  color: var(--text-primary) !important;
+}
+
+.dark .text-gray-300 {
+  color: var(--text-secondary) !important;
+}
+
+.dark .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+
+.dark .text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+.dark .border-gray-600 {
+  border-color: var(--border-medium) !important;
+}
+
+.dark .border-gray-700 {
+  border-color: var(--border-heavy) !important;
+}
+
+.dark .border-gray-800 {
+  border-color: var(--border-heavy) !important;
+}
+
+/* Dark mode hover states */
+.dark .hover\:bg-gray-600:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.dark .hover\:bg-gray-700:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.dark .hover\:bg-gray-800:hover {
+  background-color: var(--surface-secondary) !important;
+}
+
+.dark .hover\:text-gray-200:hover {
+  color: var(--text-primary) !important;
+}
+
+.dark .hover\:text-gray-300:hover {
+  color: var(--text-secondary) !important;
+}
+
+.dark .hover\:text-gray-400:hover {
+  color: var(--text-secondary) !important;
+}
+
+/* Enhanced focus states with gradients using brand colors */
+.focus\:border-gray-400:focus {
+  border-color: #28E6C5 !important;
+  box-shadow: 0 0 0 1px rgba(40, 230, 197, 0.3) !important;
+}
+
+.focus\:bg-gray-50:focus {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.05) 0%, rgba(40, 230, 197, 0.05) 100%) !important;
+}
+
+.dark .focus\:bg-gray-600:focus {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.8) 0%, rgba(1, 32, 128, 0.9) 100%) !important;
+  border-color: #28E6C5 !important;
+}
+
+.dark .focus\:border-gray-600:focus {
+  border-color: #28E6C5 !important;
+  box-shadow: 0 0 0 1px rgba(40, 230, 197, 0.3) !important;
+}
+
+/* Enhanced button neutral styles with gradients */
+.btn-neutral {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.05) 0%, rgba(1, 109, 255, 0.05) 100%) !important;
+  border-color: rgba(1, 22, 103, 0.2) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.dark .btn-neutral {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.6) 0%, rgba(1, 32, 128, 0.8) 100%) !important;
+  border-color: rgba(40, 230, 197, 0.3) !important;
+  color: var(--text-primary) !important;
+}
+
+.btn-neutral:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.1) 0%, rgba(40, 230, 197, 0.1) 100%) !important;
+  border-color: rgba(40, 230, 197, 0.5) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(1, 22, 103, 0.15) !important;
+}
+
+.dark .btn-neutral:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.9) 0%, rgba(1, 51, 153, 1) 100%) !important;
+  border-color: #28E6C5 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(40, 230, 197, 0.2) !important;
+}
+
+/* Enhanced ring focus states */
+.focus\:ring-gray-400:focus {
+  --tw-ring-color: rgba(40, 230, 197, 0.3) !important;
+  --tw-ring-offset-color: rgba(1, 22, 103, 0.1) !important;
+}
+
+.dark .focus\:ring-gray-400:focus {
+  --tw-ring-color: rgba(40, 230, 197, 0.4) !important;
+  --tw-ring-offset-color: rgba(1, 22, 103, 0.2) !important;
+}
+
+/* Enhanced input field styles with gradients */
+.dark .text-gray-50 {
+  color: var(--text-primary) !important;
+}
+
+/* Enhanced shadow overrides for dark mode */
+.dark .shadow-\[0_0_15px_rgba\(0\,0\,0\,0\.10\)\] {
+  box-shadow: 0 0 15px rgba(1, 22, 103, 0.3), 0 0 30px rgba(40, 230, 197, 0.1) !important;
+}
+
+/* Enhanced input field overrides with gradients */
+input.dark\:bg-gray-700 {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.7) 0%, rgba(1, 32, 128, 0.8) 100%) !important;
+  border-color: rgba(40, 230, 197, 0.2) !important;
+}
+
+input.dark\:border-gray-600 {
+  border-color: rgba(40, 230, 197, 0.2) !important;
+}
+
+input.dark\:focus\:bg-gray-600:focus {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.8) 0%, rgba(1, 32, 128, 0.9) 100%) !important;
+  border-color: #28E6C5 !important;
+  box-shadow: 0 0 0 2px rgba(40, 230, 197, 0.3) !important;
+}
+
+input.dark\:focus\:border-gray-600:focus {
+  border-color: #28E6C5 !important;
+}
+
+input.dark\:text-gray-50 {
+  color: var(--text-primary) !important;
+}
+
+/* Enhanced button and interactive element overrides */
+button.dark\:bg-gray-700 {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.6) 0%, rgba(1, 32, 128, 0.8) 100%) !important;
+  border-color: rgba(40, 230, 197, 0.3) !important;
+}
+
+button.dark\:border-gray-600 {
+  border-color: rgba(40, 230, 197, 0.3) !important;
+}
+
+button.dark\:hover\:bg-gray-600:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.9) 0%, rgba(1, 51, 153, 1) 100%) !important;
+  border-color: #28E6C5 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(40, 230, 197, 0.2) !important;
+}
+
+/* Enhanced specific class combinations */
+.bg-surface-secondary {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.05) 0%, rgba(1, 109, 255, 0.05) 100%) !important;
+}
+
+.dark .bg-surface-secondary {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.7) 0%, rgba(1, 32, 128, 0.8) 100%) !important;
+}
+
+.border-border-light {
+  border-color: rgba(1, 22, 103, 0.1) !important;
+}
+
+.dark .border-border-light {
+  border-color: rgba(40, 230, 197, 0.2) !important;
+}
+
+.text-text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-text-primary {
+  color: var(--text-primary) !important;
+}
+
+.hover\:bg-accent:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.1) 0%, rgba(40, 230, 197, 0.1) 100%) !important;
+}
+
+.dark .hover\:bg-accent:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.9) 0%, rgba(1, 51, 153, 1) 100%) !important;
+}
+
+.hover\:text-accent-foreground:hover {
+  color: var(--text-primary) !important;
+}
+
+.data-\[state\=open\]\:bg-surface-secondary[data-state="open"] {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.1) 0%, rgba(40, 230, 197, 0.1) 100%) !important;
+}
+
+.dark .data-\[state\=open\]\:bg-surface-secondary[data-state="open"] {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.9) 0%, rgba(1, 51, 153, 1) 100%) !important;
+}
+
+.data-\[state\=open\]\:text-text-primary[data-state="open"] {
+  color: var(--text-primary) !important;
+}
+
+.focus-visible\:ring-ring-primary:focus-visible {
+  --tw-ring-color: rgba(40, 230, 197, 0.4) !important;
+}
+
+/* Enhanced hover states for surface elements */
+.hover\:bg-surface-hover:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.1) 0%, rgba(40, 230, 197, 0.1) 100%) !important;
+  transition: all 0.2s ease !important;
+}
+
+.dark .hover\:bg-surface-hover:hover {
+  background: linear-gradient(135deg, rgba(1, 22, 103, 0.9) 0%, rgba(1, 51, 153, 1) 100%) !important;
+  box-shadow: 0 2px 8px rgba(40, 230, 197, 0.1) !important;
+}
+
+/* Enhanced border styles */
+.border-border-medium {
+  border-color: rgba(1, 22, 103, 0.2) !important;
+}
+
+.dark .border-border-medium {
+  border-color: rgba(40, 230, 197, 0.3) !important;
 }
 
 .text-token-text-primary {
@@ -584,20 +1025,19 @@ select {
 }
 
 .creative-tab {
-  /* background: linear-gradient(90deg, #904887 10.79%, #8B257E 87.08%); */
-  background: linear-gradient(90deg, #904887 10.79%, #8b257e 87.08%);
+  background: linear-gradient(90deg, #28E6C5 10.79%, #1FD4B3 87.08%);
 }
 
 .fast-tab {
-  background: linear-gradient(90deg, #2870ea 10.79%, #1b4aef 87.08%);
+  background: linear-gradient(90deg, #016DFF 10.79%, #0056CC 87.08%);
 }
 
 .balanced-tab {
-  background: linear-gradient(90deg, #d7871a 10.79%, #9f6005 87.08%);
+  background: linear-gradient(90deg, #016DFF 10.79%, #28E6C5 87.08%);
 }
 
 .precise-tab {
-  background: linear-gradient(90deg, #006880 10.79%, #005366 87.08%);
+  background: linear-gradient(90deg, #011667 10.79%, #016DFF 87.08%);
 }
 
 p > small {
@@ -1542,6 +1982,13 @@ html {
   color: var(--headline-color);
 }
 
+.dark .markdown h1,
+.dark .markdown h2,
+.dark .markdown h3,
+.dark .markdown h4 {
+  color: #FFFFFF;
+}
+
 .markdown h5 {
   font-weight: 600;
   font-size: var(--markdown-font-size);
@@ -1836,18 +2283,18 @@ html {
 .markdown td {
   border-bottom-width: 1px;
   border-left-width: 1px;
-  border-color: var(--gray-300);
+  border-color: var(--border-medium);
   padding: 0.25rem 0.75rem;
 }
 .markdown td:last-child {
   border-right-width: 1px;
-  border-color: var(--gray-300);
+  border-color: var(--border-medium);
 }
 .dark .markdown td {
-  border-color: var(--gray-600);
+  border-color: var(--border-medium);
 }
 .dark .markdown td:last-child {
-  border-color: var(--gray-600);
+  border-color: var(--border-medium);
 }
 .markdown tbody tr:last-child td:first-child {
   border-bottom-left-radius: 0.75rem;

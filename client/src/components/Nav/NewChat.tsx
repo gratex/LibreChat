@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQueryClient } from '@tanstack/react-query';
 import { QueryKeys, Constants } from 'librechat-data-provider';
-import { TooltipAnchor, NewChatIcon, MobileSidebar, Sidebar, Button } from '@librechat/client';
+import { TooltipAnchor, NewChatIcon, MobileSidebar, Sidebar, Button, ThemeContext, isDark } from '@librechat/client';
 import type { TMessage } from 'librechat-data-provider';
 import { useLocalize, useNewConvo } from '~/hooks';
 import store from '~/store';
@@ -26,6 +26,7 @@ export default function NewChat({
   const navigate = useNavigate();
   const localize = useLocalize();
   const { conversation } = store.useCreateConversationAtom(index);
+  const { theme } = useContext(ThemeContext);
 
   const clickHandler: React.MouseEventHandler<HTMLButtonElement> = useCallback(
     (e) => {
@@ -46,6 +47,9 @@ export default function NewChat({
     },
     [queryClient, conversation, newConvo, navigate, toggleNav, isSmallScreen],
   );
+
+  // Determine which logo to use based on theme - using vertical version for squared aspect ratio
+  const logoSrc = isDark(theme) ? "/assets/logo_T2M_vertical_white.svg" : "/assets/logo_T2M_vertical.svg";
 
   return (
     <>
@@ -89,7 +93,7 @@ export default function NewChat({
       {/* Logo above search */}
       <div className="mb-4 flex justify-center rounded-md p-2">
         <img
-          src="/assets/t2m_mid.svg"
+          src={logoSrc}
           alt="LibreChat Logo"
           className="w-full max-w-[200px] object-contain opacity-70"
         />

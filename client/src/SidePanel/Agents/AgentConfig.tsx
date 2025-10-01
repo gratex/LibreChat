@@ -1,7 +1,8 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useContext } from 'react';
 import { useToast } from '@chakra-ui/react';
 import { useFormContext, Controller, useWatch } from 'react-hook-form';
 import { useRecoilValue } from 'recoil';
+import { ThemeContext, isDark } from '@librechat/client';
 import { useAgentContext } from '~/context/AgentContext';
 import { useAgentTools } from '~/hooks/useAgentTools';
 import { useAgentCapabilities } from '~/hooks/useAgentCapabilities';
@@ -29,13 +30,17 @@ export default function AgentConfig() {
   const { capabilities } = useAgentCapabilities();
   const { files } = useAgentFiles(agentId);
   const { setActivePanel } = useAgentPanelContext();
+  const { theme } = useContext(ThemeContext);
+
+  // Determine which logo to use based on theme - using vertical version for squared aspect ratio
+  const logoSrc = isDark(theme) ? "/assets/logo_T2M_vertical_white.svg" : "/assets/logo_T2M_vertical.svg";
 
   // Insert logo above search form
   return (
     <>
       <div className="mb-4 flex justify-center bg-white bg-opacity-30 rounded-md p-2">
         <img
-          src="/assets/t2m_mid.svg"
+          src={logoSrc}
           alt="LibreChat Logo"
           className="w-full max-w-[200px] object-contain opacity-70"
         />
